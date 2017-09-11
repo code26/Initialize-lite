@@ -8,8 +8,7 @@ var gulp = require('gulp'),
         scss : 'path/to/style.scss',
         css : 'path/to/style.css',
         partials : 'path/to/partials/**/*.{scss,css}'
-    },
-    cssPath = 'dist/app.css';
+    };
  
 gulp.task('sass', function () {
   return gulp.src(sassPath.scss)
