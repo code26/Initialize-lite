@@ -1,16 +1,14 @@
 'use strict';
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var ggcmq  = require('gulp-group-css-media-queries');
-var autoprefixer = require('gulp-autoprefixer');
-
-var sassPath = {
-    src : 'res/scss/**/*.scss',
-    dist : 'dist/'
-}
-
-var cssPath = 'dist/app.css';
+var gulp = require('gulp'),
+    sass = require('gulp-sass'),
+    ggcmq  = require('gulp-group-css-media-queries'),
+    autoprefixer = require('gulp-autoprefixer'),
+    sassPath = {
+        src : 'res/scss/**/*.scss',
+        dist : 'dist/'
+    },
+    cssPath = 'dist/app.css';
  
 gulp.task('sass', function () {
   return gulp.src(sassPath.src)
