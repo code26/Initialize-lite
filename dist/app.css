@@ -31,13 +31,11 @@ body {
   border-radius: 50px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1366px) {
   .box {
     background-color: red;
   }
-}
 
-@media only screen and (max-width: 768px) {
   .circle {
     background-color: red;
   }

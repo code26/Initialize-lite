@@ -15,7 +15,7 @@ var cssPath = 'dist/app.css';
 gulp.task('sass', function () {
   return gulp.src(sassPath.src)
     .pipe(sass({
-        outputStyle: 'expanded', 
+        outputStyle: 'compressed', 
         errLogToConsole: true
     }).on('error', sass.logError))
     .pipe(autoprefixer({
