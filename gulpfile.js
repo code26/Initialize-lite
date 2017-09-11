@@ -5,13 +5,14 @@ var gulp = require('gulp'),
     ggcmq  = require('gulp-group-css-media-queries'),
     autoprefixer = require('gulp-autoprefixer'),
     sassPath = {
-        src : 'res/scss/**/*.scss',
-        dist : 'dist/'
+        scss : 'path/to/style.scss',
+        css : 'path/to/style.css',
+        partials : 'path/to/partials/**/*.{scss,css}'
     },
     cssPath = 'dist/app.css';
  
 gulp.task('sass', function () {
-  return gulp.src(sassPath.src)
+  return gulp.src(sassPath.scss)
     .pipe(sass({
         outputStyle: 'compressed', 
         errLogToConsole: true
@@ -33,9 +34,9 @@ gulp.task('sass', function () {
     .pipe(ggcmq({
         log: true
     }))
-    .pipe(gulp.dest(sassPath.dist));
+    .pipe(gulp.dest(sassPath.css));
 });
  
 gulp.task('default', function () {
-  gulp.watch(sassPath.src, ['sass']);
+  gulp.watch([sassPath.partials, sassPath.scss], ['sass']);
 });
