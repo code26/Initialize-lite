@@ -35,7 +35,7 @@ gulp.task('sass', function () {
     .pipe(ggcmq({
         log: true
     }))
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write(sassPath.css))
     .pipe(gulp.dest(sassPath.css));
 });
  
