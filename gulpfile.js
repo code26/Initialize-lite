@@ -9,7 +9,7 @@ var gulp = require('gulp'),
         css : 'path/to/style.css',
         partials : 'path/to/partials/**/*.{scss,css}'
     };
- 
+    
 gulp.task('sass', function () {
   return gulp.src(sassPath.scss)
     .pipe(sass({
