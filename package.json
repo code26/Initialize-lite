@@ -1,12 +1,12 @@
 {
-  "name": "buildtool",
+  "name": "initialite",
   "version": "1.0.0",
-  "description": "",
+  "description": "Same as Initialize but lighter!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "module:scss": "gulp"
   },
-  "author": "",
+  "author": "Art San Diego | asd.artsandiego@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
