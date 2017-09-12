@@ -4,14 +4,16 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     ggcmq  = require('gulp-group-css-media-queries'),
     autoprefixer = require('gulp-autoprefixer'),
+    sourcemaps = require('gulp-sourcemaps'),
     sassPath = {
-        scss : 'path/to/style.scss',
-        css : 'path/to/style.css',
-        partials : 'path/to/partials/**/*.{scss,css}'
+        scss : '../css/*.scss',
+        css : '../css/',
+        partials : '../css/partials/**/*.{scss,css}'
     };
     
 gulp.task('sass', function () {
   return gulp.src(sassPath.scss)
+    .pipe(sourcemaps.init())
     .pipe(sass({
         outputStyle: 'compressed', 
         errLogToConsole: true
@@ -33,6 +35,7 @@ gulp.task('sass', function () {
     .pipe(ggcmq({
         log: true
     }))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(sassPath.css));
 });
  
