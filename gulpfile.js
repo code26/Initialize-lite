@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     sourcemaps = require('gulp-sourcemaps'),
     sassPath = {
-         scss : '../css/*.scss',
+        scss : '../css/*.scss',
         css : '../css/',
         partials : '../css/partials/'
     };
